@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-header {
+  padding: 10px 75px;
+  background: #1F2640;
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.body-container {
+  text-align: left;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.inline-item {
+  margin-right: 40px;
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+.ui.secondary.pointing.menu .active.item {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: #6DB346 !important;
+    font-weight: 700;
+    color: #6DB346 !important;
+    border-bottom: 3px solid;
+}
+
+.lang-selection-dropdown {
+    float: right;
+    right: 17px;
+    bottom: 42px;
+}
