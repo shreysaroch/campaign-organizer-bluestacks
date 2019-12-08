@@ -1,7 +1,7 @@
-const tabDatamap = {
+const tabDataMap = {
     'UPCOMING': 'upcomingMockData',
     'LIVE': 'liveMockData',
     'PAST': 'pastMockData'
 }
 
-export default tabDatamap;
+export default tabDataMap;

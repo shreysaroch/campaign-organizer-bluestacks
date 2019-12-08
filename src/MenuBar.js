@@ -4,7 +4,7 @@ import TableData from './TableData';
 import {upcomingMockData} from './models/data/Mock'
 import strings from './models/languageData/locales'
 import {writeDataToLocalStorage, readDataFromLocalStorage, saveCampaign} from './helpers'
-import tabDatamap from './constants'
+import tabDataMap from './constants'
 
 
    const options = [
@@ -60,12 +60,24 @@ class MenuBar extends Component {
       this.setState({
         loading: true
       });
+      let newActive;
+      const today = new Date().getTime()
+      if(today - obj.createdOn > 0) {
+          newActive = 'PAST';
+      }
+      if(today - obj.createdOn < 0) {
+          newActive = 'UPCOMING';
+      } 
+      if(today - obj.createdOn === 0) {
+          newActive = 'LIVE';
+      }
 
-      saveCampaign(activeTab, obj);
+
+      saveCampaign(newActive, obj);
 
       setTimeout(() => {
         this.setState({
-          currentTabData: readDataFromLocalStorage(tabDatamap[activeTab]),
+          currentTabData: readDataFromLocalStorage(tabDataMap[newActive]),
           loading: false
         });
       }, 1000)
