@@ -50,7 +50,7 @@ class MenuBar extends Component {
             dataToDisplay = readDataFromLocalStorage('pastMockData');
         }
 
-        this.setState({ 
+        this.setState({
             activeItem: name,
             currentTabData: dataToDisplay
          })
@@ -61,14 +61,16 @@ class MenuBar extends Component {
         loading: true
       });
       let newActive;
-      const today = new Date().getTime()
+      const today = new Date().getTime();
+      const dayToday = new Date().getDay();
+      const checkForDay = new Date(obj.createdOn).getDay()
       if(today - obj.createdOn > 0) {
           newActive = 'PAST';
       }
       if(today - obj.createdOn < 0) {
           newActive = 'UPCOMING';
       }
-      if(today - obj.createdOn === 0) {
+      if(dayToday - checkForDay === 0) {
           newActive = 'LIVE';
       }
 
