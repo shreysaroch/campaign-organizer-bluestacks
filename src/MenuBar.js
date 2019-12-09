@@ -67,7 +67,7 @@ class MenuBar extends Component {
       }
       if(today - obj.createdOn < 0) {
           newActive = 'UPCOMING';
-      } 
+      }
       if(today - obj.createdOn === 0) {
           newActive = 'LIVE';
       }

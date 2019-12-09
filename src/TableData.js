@@ -93,10 +93,14 @@ class TableData extends Component {
                             </Table.Cell>
                             <Table.Cell>
                             <span className={'inline-item'}>
+                                <a href={'https://shreysaroch-prod-assets.s3.ap-south-1.amazonaws.com/Bluestacks+Game+data.xlsx'} target={'_blank'}>
                                 <Image src={'/images/file.png'} size='mini' inline spaced={'right'} /><span className={'App-link'}>CSV</span>
+                                </a>
                             </span>
                               <span className={'inline-item'}>
+                                  <a href={'https://shreysaroch-prod-assets.s3.ap-south-1.amazonaws.com/Bluestacks+Game+data.xlsx'} target={'_blank'}>
                                 <Image src={'/images/statistics.png'} size='mini' inline spaced={'right'}/><span className={'App-link'}>Report</span>
+                                  </a>
                               </span>
                               <span className={'inline-item'} onClick={() => this.handleCalenderClick(item)}>
                                 <Image src={'/images/calendar.png'} size='mini' inline spaced={'right'} /><span className={'App-link'}>Schedule Again</span>
